@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Online | Honey & Crumb Bakery</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Honey &amp; Crumb</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order Online</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Order Online</h1>
+      <p>Place your order for same-day pickup or delivery within 5 miles. Orders must be placed by 10am.</p>
+    </section>
+
+    <section class="order-section">
+      <div class="order-container">
+        <h2>Build Your Order</h2>
+
+        <div class="order-items">
+          <div class="order-item">
+            <div class="order-item-info">
+              <span class="order-emoji">🍞</span>
+              <div>
+                <h4>Country Sourdough</h4>
+                <p>$9.00</p>
+              </div>
+            </div>
+            <div class="order-qty">
+              <button class="qty-btn" data-action="decrease" data-item="sourdough">-</button>
+              <span class="qty-count" id="sourdough-qty">0</span>
+              <button class="qty-btn" data-action="increase" data-item="sourdough">+</button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-item-info">
+              <span class="order-emoji">🥐</span>
+              <div>
+                <h4>Almond Croissant</h4>
+                <p>$5.00</p>
+              </div>
+            </div>
+            <div class="order-qty">
+              <button class="qty-btn" data-action="decrease" data-item="croissant">-</button>
+              <span class="qty-count" id="croissant-qty">0</span>
+              <button class="qty-btn" data-action="increase" data-item="croissant">+</button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-item-info">
+              <span class="order-emoji">🥧</span>
+              <div>
+                <h4>Honey Custard Tart</h4>
+                <p>$6.00</p>
+              </div>
+            </div>
+            <div class="order-qty">
+              <button class="qty-btn" data-action="decrease" data-item="tart">-</button>
+              <span class="qty-count" id="tart-qty">0</span>
+              <button class="qty-btn" data-action="increase" data-item="tart">+</button>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-item-info">
+              <span class="order-emoji">🍪</span>
+              <div>
+                <h4>Brown Butter Cookie</h4>
+                <p>$3.00</p>
+              </div>
+            </div>
+            <div class="order-qty">
+              <button class="qty-btn" data-action="decrease" data-item="cookie">-</button>
+              <span class="qty-count" id="cookie-qty">0</span>
+              <button class="qty-btn" data-action="increase" data-item="cookie">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <div class="order-total">
+            <span>Total:</span>
+            <span id="order-total">$0.00</span>
+          </div>
+
+          <div class="order-form">
+            <label for="pickup-name">Your Name</label>
+            <input type="text" id="pickup-name" placeholder="Name for pickup" required />
+
+            <label for="order-type">Pickup or Delivery?</label>
+            <select id="order-type">
+              <option value="">Select one</option>
+              <option value="pickup">Pickup</option>
+              <option value="delivery">Delivery</option>
+            </select>
+
+            <div id="delivery-address-field" style="display:none;">
+              <label for="delivery-address">Delivery Address</label>
+              <input type="text" id="delivery-address" placeholder="Street address" />
+            </div>
+
+            <button class="btn btn-primary" id="place-order-btn">Place Order</button>
+          </div>
+        </div>
+
+        <div id="order-confirmation" class="order-confirmation" style="display:none;">
+          <span class="confirm-icon">✅</span>
+          <h3>Order Confirmed!</h3>
+          <p id="confirm-message"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">Honey &amp; Crumb</span>
+        <p>123 Maple Street, Fairview, OH 44111</p>
+        <p>Open Mon–Sat, 7am–5pm</p>
+      </div>
+      <div class="footer-links">
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Honey &amp; Crumb Bakery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>
